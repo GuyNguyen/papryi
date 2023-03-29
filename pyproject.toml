@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "papryi"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+opencv-python = "^4.7.0.72"
+opencv-contrib-python = "^4.7.0.72"
+isbntools = "^4.3.29"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
