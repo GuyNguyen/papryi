@@ -11,7 +11,7 @@
 - Python
 - Poetry
 - Ruff
-- TKinter (will be changed)
+- PySimpleGUI
 - Sqlite3
 - Opencv
 
