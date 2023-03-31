@@ -33,3 +33,4 @@ work in progress
 - https://lynn-kwong.medium.com/python-typing-and-validation-with-mypy-and-pydantic-a2563d67e6d
 - https://blog.laurentcharignon.com/post/laptop-setup-with-ansible/
 - https://medium.com/swlh/python-oop-mvc-data-science-tkinter-23c3e8dab70f
+- https://course.ccs.neu.edu/cs5004/lecturemvc.html
