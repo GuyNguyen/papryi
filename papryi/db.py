@@ -1,7 +1,7 @@
 import sqlite3
 
 from contextlib import closing
-from typing import Literal
+from typing_extensions import LiteralString
 
 
 class DB:
@@ -23,14 +23,7 @@ class DB:
                 connection.commit()
 
     def insert_row(self, values: tuple[str, str, str, int]) -> None:
-        query: Literal[
-            """
-            INSERT INTO library (isbn, title, author, copies)
-                VALUES (?, ?, ?, ?)
-                ON CONFLICT(isbn) DO UPDATE SET
-                    copies = copies + 1
-            """
-        ] = """
+        query: LiteralString = """
             INSERT INTO library (isbn, title, author, copies)
                 VALUES (?, ?, ?, ?)
                 ON CONFLICT(isbn) DO UPDATE SET
@@ -43,11 +36,7 @@ class DB:
                 connection.commit()
 
     def delete_row(self, isbn: tuple[str]) -> None:
-        query: Literal[
-            """
-            DELETE FROM library WHERE isbn = (?)
-            """
-        ] = """
+        query: LiteralString = """
             DELETE FROM library WHERE isbn = (?)
             """
 
@@ -60,11 +49,7 @@ class DB:
         pass
 
     def select_row(self) -> list[str]:
-        query: Literal[
-            """
-            SELECT * FROM library
-            """
-        ] = """
+        query: LiteralString = """
             SELECT * FROM library
             """
 
