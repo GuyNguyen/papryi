@@ -2,14 +2,16 @@ import cv2
 import pathlib
 
 from isbntools.app import meta
+from pathlib import Path
 
 
 def isbn_formatter(num: str) -> str:
     num = "-".join([num[:3], num[3:4], num[4:9], num[9:12], num[12:13]])
+
     return num
 
 
-def barcode_reader(image: str):
+def barcode_reader(image: str) -> None:
     image = cv2.imread(image)
     bd = cv2.barcode.BarcodeDetector()
 
@@ -21,19 +23,19 @@ def barcode_reader(image: str):
     print(meta(isbn))
 
 
-def isbn_grab(images: list[str]):
+def isbn_grab(images: list[Path]) -> None:
     for image in images:
         print(image)
         barcode_reader(str(image))
 
 
-def list_of_files() -> list[str]:
+def list_of_files() -> list[Path]:
     path = pathlib.Path("papryi\\barcodes").glob("*.jpg")
-    result = [file for file in path if file.is_file()]
-    print(result)
+    result: list[Path] = [file for file in path if file.is_file()]
+
     return result
 
 
 if __name__ == "__main__":
-    images: list = list_of_files()
+    images: list[Path] = list_of_files()
     isbn_grab(images)
