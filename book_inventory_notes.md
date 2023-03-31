@@ -22,7 +22,8 @@ work in progress
 - Upgrade to aiosqlite if file IO performance takes a hit
 - Use multicore for interface/gui for funzies
 - Enforce mypy with pydantic
-- rename "file_manager" to something more appropriate
+- Rename "file_manager" to something more appropriate
+- Consider using a MVC pattern
 
 ## Helpful Links
 - https://data-flair.training/blogs/library-management-system-python-project/
@@ -31,3 +32,4 @@ work in progress
 - https://github.com/omnilib/aiosqlite
 - https://lynn-kwong.medium.com/python-typing-and-validation-with-mypy-and-pydantic-a2563d67e6d
 - https://blog.laurentcharignon.com/post/laptop-setup-with-ansible/
+- https://medium.com/swlh/python-oop-mvc-data-science-tkinter-23c3e8dab70f
