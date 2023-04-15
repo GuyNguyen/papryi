@@ -24,6 +24,7 @@ work in progress
 - Enforce mypy with pydantic
 - Rename "file_manager" to something more appropriate
 - Consider using a MVC pattern
+- flaskwebgui for desktop app (replaces PySimpleGUI with electronjs)
 
 ## Helpful Links
 - https://data-flair.training/blogs/library-management-system-python-project/
@@ -34,3 +35,4 @@ work in progress
 - https://blog.laurentcharignon.com/post/laptop-setup-with-ansible/
 - https://medium.com/swlh/python-oop-mvc-data-science-tkinter-23c3e8dab70f
 - https://course.ccs.neu.edu/cs5004/lecturemvc.html
+- https://github.com/ClimenteA/flaskwebgui
